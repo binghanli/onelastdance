@@ -30,16 +30,20 @@
                             <div className="logo" />
                             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                                 <Menu.Item key="1">
-                                    <Icon type="user" />
-                                    <span className="nav-text">nav 1</span>
+                                    <Icon type="home" />
+                                    <span className="nav-text">机器管理</span>
                                 </Menu.Item>
                                 <Menu.Item key="2">
-                                    <Icon type="video-camera" />
-                                    <span className="nav-text">nav 2</span>
+                                    <Icon type="file" />
+                                    <span className="nav-text">配置管理</span>
                                 </Menu.Item>
                                 <Menu.Item key="3">
-                                    <Icon type="upload" />
-                                    <span className="nav-text">nav 3</span>
+                                    <Icon type="control" />
+                                    <span className="nav-text">流程管理</span>
+                                </Menu.Item>
+                                <Menu.Item key="4">
+                                    <Icon type="team" />
+                                    <span className="nav-text">权限管理</span>
                                 </Menu.Item>
                             </Menu>
                         </Sider>
@@ -53,7 +57,7 @@
                                         style={{cursor: 'pointer'}}
                                     />
                                 </span>
-                                <span style={{color:'#fff', paddingLeft:'2%', fontSize:'1.4em'}}>Information Management System</span>
+                                <span style={{color:'#fff', paddingLeft:'2%', fontSize:'1.4em'}}>造火箭ing</span>
                                 <span style={{color:'#fff', float:'right', paddingRight:'1%'}}>
                                     <img src={logo} className="App-logo" alt="logo" />
                                 </span>
@@ -61,7 +65,7 @@
                             <Content style={{ margin: '0 16px' }}>
                                 <Breadcrumb style={{ margin: '12px 0' }}>
                                     <Breadcrumb.Item>User</Breadcrumb.Item>
-                                    <Breadcrumb.Item>Bill</Breadcrumb.Item>
+                                    <Breadcrumb.Item>Li Binghan</Breadcrumb.Item>
                                 </Breadcrumb>
                                 <div style={{ padding: 24, background: '#fff', minHeight: 780 }}>
          
