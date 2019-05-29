@@ -3,6 +3,15 @@
         import { Layout, Menu, Breadcrumb, Icon } from 'antd';
         import 'antd/dist/antd.css';
         import logo from '../logo.svg';
+
+    /*     import functionimg from '../functionimg.jpg';
+        import cloudServer from '../cloudServer.jpg'; */
+        import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+        import Home from "./home/home"
+        import Configure from "./configure/configure"
+        import Control from "./control/control"
+        import Auth from "./auth/auth"
+
         import './Lzz.css'
         const { Header, Content, Footer, Sider } = Layout;
          
@@ -21,6 +30,7 @@
          
             render() {
                 return (
+                    <Router>
                     <Layout>
                         <Sider
                             trigger={null}
@@ -29,21 +39,29 @@
                         >
                             <div className="logo" />
                             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-                                <Menu.Item key="1">
+                                <Menu.Item key="home">
                                     <Icon type="home" />
-                                    <span className="nav-text">机器管理</span>
+                                    <span className="nav-text">
+                                        <Link to="/">机器管理</Link>
+                                    </span>
                                 </Menu.Item>
-                                <Menu.Item key="2">
+                                <Menu.Item key="configure">
                                     <Icon type="file" />
-                                    <span className="nav-text">配置管理</span>
+                                    <span className="nav-text">
+                                        <Link to="configure">配置管理</Link>
+                                    </span>
                                 </Menu.Item>
-                                <Menu.Item key="3">
+                                <Menu.Item key="control">
                                     <Icon type="control" />
-                                    <span className="nav-text">流程管理</span>
+                                    <span className="nav-text">
+                                    <Link to="control">流程管理</Link>
+                                    </span>
                                 </Menu.Item>
-                                <Menu.Item key="4">
+                                <Menu.Item key="auth">
                                     <Icon type="team" />
-                                    <span className="nav-text">权限管理</span>
+                                    <span className="nav-text">
+                                    <Link to="auth">权限管理</Link>
+                                    </span>
                                 </Menu.Item>
                             </Menu>
                         </Sider>
@@ -64,11 +82,13 @@
                             </Header>
                             <Content style={{ margin: '0 16px' }}>
                                 <Breadcrumb style={{ margin: '12px 0' }}>
-                                    <Breadcrumb.Item>User</Breadcrumb.Item>
-                                    <Breadcrumb.Item>Li Binghan</Breadcrumb.Item>
+                                    <Breadcrumb.Item>待开发</Breadcrumb.Item>
                                 </Breadcrumb>
                                 <div style={{ padding: 24, background: '#fff', minHeight: 780 }}>
-         
+                                <Route exact path="/" component={Home} />
+                                <Route exact path="/configure" component={Configure} />
+                                <Route exact path="/control" component={Control} />
+                                <Route exact path="/auth" component={Auth} />
                                 </div>
                             </Content>
                             <Footer style={{ textAlign: 'center' }}>
@@ -76,6 +96,7 @@
                             </Footer>
                         </Layout>
                     </Layout>
+                    </Router>
                 );
             }
         }
